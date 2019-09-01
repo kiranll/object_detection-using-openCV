@@ -34,7 +34,7 @@ def find_biggest_contour(image):
     #we dont need it
     contours, hierarchy = cv2.findContours(image, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
 
-    # Isolate largest contour
+    # Isolate largest contour.
     contour_sizes = [(cv2.contourArea(contour), contour) for contour in contours]
     biggest_contour = max(contour_sizes, key=lambda x: x[0])[1]
 
@@ -59,7 +59,7 @@ def find_strawberry(image):
     #order of areas is reversed. Red occupies the least significant area,
     # Green the second (still), and Blue the third.
     # we'll be manipulating pixels directly
-    #most compatible for the transofrmations we're about to do
+    #the most compatible for the transofrmations we're about to do
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     # Make a consistent size
@@ -108,7 +108,7 @@ def find_strawberry(image):
     #erosion followed by dilation. It is useful in removing noise
     mask_clean = cv2.morphologyEx(mask_closed, cv2.MORPH_OPEN, kernel)
 
-    # Find biggest strawberry
+    # Find biggest strawberry and
     #get back list of segmented strawberries and an outline for the biggest one
     big_strawberry_contour, mask_strawberries = find_biggest_contour(mask_clean)
 
