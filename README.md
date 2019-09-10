@@ -1,6 +1,6 @@
 
 
-##Overview
+##Overview..
 
 I'll use OpenCV to detect a strawberry in an image and perform a series of operations which i've documented in the code to eventually highlight the biggest strawberry in an image and then draw a green circle around it.
 
@@ -15,7 +15,7 @@ You can use [pip](https://pip.pypa.io/en/stable/) to install any missing depende
 [this](http://docs.opencv.org/2.4/doc/tutorials/introduction/table_of_content_introduction/table_of_content_introduction.html) 
 guide.
 
-##Usage
+##Usage..
 
 Run 
 `python demo.py` 
