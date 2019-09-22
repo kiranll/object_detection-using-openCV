@@ -6,7 +6,7 @@ I'll use OpenCV to detect a strawberry in an image and perform a series of opera
 
 ##Dependencies
 
-* openCV
+* opencv
 * matplotlib
 * numpy
 * math
